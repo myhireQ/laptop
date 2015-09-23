@@ -67,8 +67,23 @@ brew_install_or_upgrade() {
   fi
 }
 
+brew_cask_install() {
+  if brew_cask_is_installed "$1"; then
+    fancy_echo "%s is already installed. Skipping ..." "$1"
+  else
+    fancy_echo "Installing %s ..." "$1"
+    brew cask install "$@"
+  fi
+}
+
 brew_is_installed() {
   local name="$(brew_expand_alias "$1")"
+
+  brew list -1 | grep -Fqx "$name"
+}
+
+brew_cask_is_installed() {
+  local name="$(brew_cask_expand_alias "$1")"
 
   brew list -1 | grep -Fqx "$name"
 }
@@ -85,6 +100,10 @@ brew_tap() {
 
 brew_expand_alias() {
   brew info "$1" 2>/dev/null | head -1 | awk '{gsub(/:/, ""); print $1}'
+}
+
+brew_cask_expand_alias() {
+  brew cask info "$1" 2>/dev/null | head -1 | awk '{gsub(/:/, ""); print $1}'
 }
 
 brew_launchctl_restart() {
@@ -133,6 +152,8 @@ brew update
 
 brew_install_or_upgrade 'zsh'
 brew_install_or_upgrade 'git'
+brew_install_or_upgrade 'mysql'
+brew_launchctl_restart 'mysql'
 brew_install_or_upgrade 'postgres'
 brew_launchctl_restart 'postgresql'
 brew_install_or_upgrade 'redis'
@@ -182,6 +203,23 @@ if ! command -v rcup >/dev/null; then
   brew_tap 'thoughtbot/formulae'
   brew_install_or_upgrade 'rcm'
 fi
+
+brew_tap 'caskroom/cask'
+brew_install_or_upgrade caskroom/cask/brew-cask
+brew_cask_install google-chrome
+brew_cask_install firefox
+brew_cask_install iterm2
+brew_cask_install shiftit
+
+if ! command -v nvim >/dev/null; then
+  brew_tap 'neovim/neovim'
+  brew install --HEAD neovim
+else
+  brew reinstall --HEAD neovim
+fi
+
+brew_tap 'neovim/neovim'
+brew install --HEAD neovim
 
 if [ -f "$HOME/.laptop.local" ]; then
   . "$HOME/.laptop.local"
