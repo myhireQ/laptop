@@ -58,10 +58,15 @@ What it sets up
 * [Bundler] for managing Ruby libraries
 * [Exuberant Ctags] for indexing files for vim tab completion
 * [Foreman] for managing web processes
+* Google Chrome
 * [hub] for interacting with the GitHub API
 * [Heroku Toolbelt] for interacting with the Heroku API
 * [Homebrew] for managing operating system libraries
 * [ImageMagick] for cropping and resizing images
+* [iTerm2] for a better terminal
+* Mozilla Firefox
+* [MySQL] for storing relational data
+* [Neovim] Neovim is *vim* out of the box
 * [Node.js] and [NPM], for running apps and installing JavaScript packages
 * [Postgres] for storing relational data
 * [Qt] for headless JavaScript testing via Capybara Webkit
@@ -70,6 +75,7 @@ What it sets up
 * [Redis] for storing key-value data
 * [Ruby Build] for installing Rubies
 * [Ruby] stable for writing general-purpose code
+* [ShiftIt] Managing window size and position in OSX
 * [The Silver Searcher] for finding things in files
 * [Tmux] for saving project state and switching between projects
 * [Zsh] as your shell
@@ -80,7 +86,10 @@ What it sets up
 [hub]: http://hub.github.com/
 [Heroku Toolbelt]: https://toolbelt.heroku.com/
 [Homebrew]: http://brew.sh/
+[iTerm2]: https://www.iterm2.com/
 [ImageMagick]: http://www.imagemagick.org/
+[MySQL]: https://www.mysql.com/
+[Neovim]: https://neovim.io/
 [Node.js]: http://nodejs.org/
 [NPM]: https://www.npmjs.org/
 [Postgres]: http://www.postgresql.org/
@@ -90,6 +99,7 @@ What it sets up
 [Redis]: http://redis.io/
 [Ruby Build]: https://github.com/sstephenson/ruby-build
 [Ruby]: https://www.ruby-lang.org/en/
+[ShiftIt]: https://github.com/fikovnik/ShiftIt
 [The Silver Searcher]: https://github.com/ggreer/the_silver_searcher
 [Tmux]: http://tmux.sourceforge.net/
 [Zsh]: http://www.zsh.org/
