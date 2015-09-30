@@ -181,6 +181,10 @@ append_to_zshrc 'eval "$(rbenv init - --no-rehash zsh)"' 1
 brew_install_or_upgrade 'openssl'
 brew unlink openssl && brew link openssl --force
 brew_install_or_upgrade 'libyaml'
+brew_install_or_upgrade 'python'
+brew link python
+
+pip install -U powerline-status
 
 ruby_version="$(curl -sSL http://ruby.thoughtbot.com/latest)"
 
@@ -222,7 +226,21 @@ else
   brew reinstall --HEAD neovim
 fi
 
+brew_tap 'caskroom/fonts'
+
 brew_tap 'neovim/neovim'
+brew_cask_install font-anonymous-pro-for-powerline
+brew_cask_install font-dejavu-sans-mono-for-powerline
+brew_cask_install font-droid-sans-mono-for-powerline
+brew_cask_install font-fira-mono-for-powerline
+brew_cask_install font-inconsolata-dz-for-powerline
+brew_cask_install font-inconsolata-for-powerline
+brew_cask_install font-inconsolata-g-for-powerline
+brew_cask_install font-liberation-mono-for-powerline
+brew_cask_install font-meslo-lg-for-powerline
+brew_cask_install font-sauce-code-powerline
+brew_cask_install font-source-code-pro-for-powerline
+
 brew install --HEAD neovim
 
 if [ -f "$HOME/.laptop.local" ]; then
