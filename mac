@@ -218,6 +218,7 @@ brew_cask_install google-chrome
 brew_cask_install firefox
 brew_cask_install iterm2
 brew_cask_install shiftit
+brew_cask_install karabiner
 
 if ! command -v nvim >/dev/null; then
   brew_tap 'neovim/neovim'
