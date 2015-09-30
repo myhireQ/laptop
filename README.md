@@ -64,11 +64,13 @@ What it sets up
 * [Homebrew] for managing operating system libraries
 * [ImageMagick] for cropping and resizing images
 * [iTerm2] for a better terminal
+* [Karabiner] for customizing the keyboard
 * Mozilla Firefox
 * [MySQL] for storing relational data
 * [Neovim] Neovim is *vim* out of the box
 * [Node.js] and [NPM], for running apps and installing JavaScript packages
 * [Postgres] for storing relational data
+* [Powerline] (and fonts) for an awesome status bar
 * [Qt] for headless JavaScript testing via Capybara Webkit
 * [Rbenv] for managing versions of Ruby
 * [RCM] for managing company and personal dotfiles
@@ -88,11 +90,13 @@ What it sets up
 [Homebrew]: http://brew.sh/
 [iTerm2]: https://www.iterm2.com/
 [ImageMagick]: http://www.imagemagick.org/
+[Karabiner]: https://pqrs.org/osx/karabiner/
 [MySQL]: https://www.mysql.com/
 [Neovim]: https://neovim.io/
 [Node.js]: http://nodejs.org/
 [NPM]: https://www.npmjs.org/
 [Postgres]: http://www.postgresql.org/
+[Powerline]: https://powerline.readthedocs.org/en/latest/
 [Qt]: http://qt-project.org/
 [Rbenv]: https://github.com/sstephenson/rbenv
 [RCM]: https://github.com/thoughtbot/rcm
