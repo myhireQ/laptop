@@ -67,6 +67,7 @@ What it sets up
 * [Karabiner] for customizing the keyboard
 * Mozilla Firefox
 * [MySQL] for storing relational data
+* [MySQLWorkbench] MySQL GUI application
 * [Neovim] Neovim is *vim* out of the box
 * [Node.js] and [NPM], for running apps and installing JavaScript packages
 * [Postgres] for storing relational data
@@ -78,6 +79,7 @@ What it sets up
 * [Ruby Build] for installing Rubies
 * [Ruby] stable for writing general-purpose code
 * [ShiftIt] Managing window size and position in OSX
+* [Slack] Messaging application
 * [The Silver Searcher] for finding things in files
 * [Tmux] for saving project state and switching between projects
 * [Zsh] as your shell
@@ -92,6 +94,7 @@ What it sets up
 [ImageMagick]: http://www.imagemagick.org/
 [Karabiner]: https://pqrs.org/osx/karabiner/
 [MySQL]: https://www.mysql.com/
+[MySQLWorkbench]: https://www.mysql.com/products/workbench/
 [Neovim]: https://neovim.io/
 [Node.js]: http://nodejs.org/
 [NPM]: https://www.npmjs.org/
@@ -104,6 +107,7 @@ What it sets up
 [Ruby Build]: https://github.com/sstephenson/ruby-build
 [Ruby]: https://www.ruby-lang.org/en/
 [ShiftIt]: https://github.com/fikovnik/ShiftIt
+[Slack]: https://slack.com/
 [The Silver Searcher]: https://github.com/ggreer/the_silver_searcher
 [Tmux]: http://tmux.sourceforge.net/
 [Zsh]: http://www.zsh.org/
