@@ -223,16 +223,8 @@ brew_cask_install iterm2
 brew_cask_install shiftit
 brew_cask_install karabiner
 
-if ! command -v nvim >/dev/null; then
-  brew_tap 'neovim/neovim'
-  brew install --HEAD neovim
-else
-  brew reinstall --HEAD neovim
-fi
-
 brew_tap 'caskroom/fonts'
 
-brew_tap 'neovim/neovim'
 brew_cask_install font-anonymous-pro-for-powerline
 brew_cask_install font-dejavu-sans-mono-for-powerline
 brew_cask_install font-droid-sans-mono-for-powerline
@@ -245,7 +237,12 @@ brew_cask_install font-meslo-lg-for-powerline
 brew_cask_install font-sauce-code-powerline
 brew_cask_install font-source-code-pro-for-powerline
 
-brew install --HEAD neovim
+if ! command -v nvim >/dev/null; then
+  brew_tap 'neovim/neovim'
+  brew install --HEAD neovim
+else
+  brew reinstall --HEAD neovim
+fi
 
 if [ -f "$HOME/.laptop.local" ]; then
   . "$HOME/.laptop.local"
