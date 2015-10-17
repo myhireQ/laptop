@@ -154,26 +154,29 @@ fi
 fancy_echo "Updating Homebrew formulas ..."
 brew update
 
-brew_install_or_upgrade 'zsh'
-brew_install_or_upgrade 'git'
+
 brew_install_or_upgrade 'mysql'
 brew_launchctl_restart 'mysql'
+
 brew_install_or_upgrade 'postgres'
 brew_launchctl_restart 'postgresql'
+
 brew_install_or_upgrade 'redis'
 brew_launchctl_restart 'redis'
-brew_install_or_upgrade 'the_silver_searcher'
-brew_install_or_upgrade 'vim'
-brew_install_or_upgrade 'ctags'
-brew_install_or_upgrade 'tmux'
-brew_install_or_upgrade 'reattach-to-user-namespace'
-brew_install_or_upgrade 'imagemagick'
-brew_install_or_upgrade 'qt'
-brew_install_or_upgrade 'hub'
-brew_install_or_upgrade 'node'
 
+brew_install_or_upgrade 'ctags'
+brew_install_or_upgrade 'git'
+brew_install_or_upgrade 'hub'
+brew_install_or_upgrade 'imagemagick'
+brew_install_or_upgrade 'node'
+brew_install_or_upgrade 'qt'
 brew_install_or_upgrade 'rbenv'
 brew_install_or_upgrade 'ruby-build'
+brew_install_or_upgrade 'reattach-to-user-namespace'
+brew_install_or_upgrade 'the_silver_searcher'
+brew_install_or_upgrade 'tmux'
+brew_install_or_upgrade 'vim'
+brew_install_or_upgrade 'zsh'
 
 # shellcheck disable=SC2016
 append_to_zshrc 'eval "$(rbenv init - --no-rehash zsh)"' 1
@@ -222,14 +225,15 @@ fi
 brew_tap 'caskroom/cask'
 brew_install_or_upgrade caskroom/cask/brew-cask
 
-brew_cask_install mysqlworkbench
-brew_cask_install slack
 brew_cask_install google-chrome
-#brew_cask_install firefox
-brew cask install --appdir="/Applications" firefox # for selenium
 brew_cask_install iterm2
-brew_cask_install shiftit
 brew_cask_install karabiner
+brew_cask_install mysqlworkbench
+brew_cask_install shiftit
+brew_cask_install slack
+
+#brew_cask_install firefox
+brew cask install --appdir="/Applications" firefox # appdir for selenium
 
 brew_tap 'caskroom/fonts'
 
