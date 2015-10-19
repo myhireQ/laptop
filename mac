@@ -164,11 +164,16 @@ brew_launchctl_restart 'postgresql'
 brew_install_or_upgrade 'redis'
 brew_launchctl_restart 'redis'
 
+brew_install_or_upgrade 'awscli'
+brew_install_or_upgrade 'docker'
+brew_install_or_upgrade 'docker-machine'
+brew_install_or_upgrade 'docker-compose'
 brew_install_or_upgrade 'ctags'
 brew_install_or_upgrade 'git'
 brew_install_or_upgrade 'hub'
 brew_install_or_upgrade 'imagemagick'
 brew_install_or_upgrade 'node'
+brew_install_or_upgrade 'packer'
 brew_install_or_upgrade 'qt'
 brew_install_or_upgrade 'rbenv'
 brew_install_or_upgrade 'ruby-build'
@@ -227,10 +232,14 @@ brew_install_or_upgrade caskroom/cask/brew-cask
 
 brew_cask_install google-chrome
 brew_cask_install iterm2
+brew_cask_install java
 brew_cask_install karabiner
 brew_cask_install mysqlworkbench
 brew_cask_install shiftit
 brew_cask_install slack
+brew_cask_install virtualbox
+brew_cask_install vagrant
+brew_cask_install vagrant-manager
 
 #brew_cask_install firefox
 brew cask install --appdir="/Applications" firefox # appdir for selenium
