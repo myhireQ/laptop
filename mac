@@ -169,6 +169,7 @@ brew_install_or_upgrade 'docker'
 brew_install_or_upgrade 'docker-machine'
 brew_install_or_upgrade 'docker-compose'
 brew_install_or_upgrade 'ctags'
+brew_install_or_upgrade 'fzf'
 brew_install_or_upgrade 'git'
 brew_install_or_upgrade 'hub'
 brew_install_or_upgrade 'imagemagick'
@@ -240,6 +241,7 @@ brew_cask_install slack
 brew_cask_install virtualbox
 brew_cask_install vagrant
 brew_cask_install vagrant-manager
+brew_cask_install wkhtmltopdf
 
 #brew_cask_install firefox
 brew cask install --appdir="/Applications" firefox # appdir for selenium
