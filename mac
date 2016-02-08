@@ -155,10 +155,10 @@ fancy_echo "Updating Homebrew formulas ..."
 brew update
 
 
-brew_install_or_upgrade 'mysql'
+brew_install_or_upgrade 'homebrew/versions/mysql56'
 brew_launchctl_restart 'mysql'
 
-brew_install_or_upgrade 'postgres'
+brew_install_or_upgrade 'homebrew/versions/postgresql94'
 brew_launchctl_restart 'postgresql'
 
 brew_install_or_upgrade 'redis'
@@ -175,10 +175,15 @@ brew_install_or_upgrade 'hub'
 brew_install_or_upgrade 'imagemagick'
 brew_install_or_upgrade 'node'
 brew_install_or_upgrade 'packer'
-brew_install_or_upgrade 'qt'
+
+brew_install_or_upgrade 'qt5'
+brew linkapps qt5
+brew link --force qt5
+
 brew_install_or_upgrade 'rbenv'
 brew_install_or_upgrade 'ruby-build'
 brew_install_or_upgrade 'reattach-to-user-namespace'
+brew_install_or_upgrade 'terraform'
 brew_install_or_upgrade 'the_silver_searcher'
 brew_install_or_upgrade 'tmux'
 brew_install_or_upgrade 'vim'
@@ -228,6 +233,7 @@ if ! command -v rcup >/dev/null; then
   brew_install_or_upgrade 'rcm'
 fi
 
+fancy_echo "Installing / Upgrading brew-cask"
 brew_tap 'caskroom/cask'
 brew_install_or_upgrade caskroom/cask/brew-cask
 
@@ -243,7 +249,6 @@ brew_cask_install vagrant
 brew_cask_install vagrant-manager
 brew_cask_install wkhtmltopdf
 
-#brew_cask_install firefox
 brew cask install --appdir="/Applications" firefox # appdir for selenium
 
 brew_tap 'caskroom/fonts'
